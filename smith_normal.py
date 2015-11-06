@@ -126,7 +126,7 @@ def smith_normal_form(A):
                 if S[piv+1,piv+1] % S[piv,piv]:
                     S[:,piv] += S[:,piv+1]
                     reduce_piv(piv,piv)
-                else: return
+            else: return
 
 
     step_1()
