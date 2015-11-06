@@ -51,7 +51,7 @@ def smith_normal_form(A):
                     alpha = piv_val//common_divisor
                     beta = other_val//common_divisor
 
-                    Lo = np.eye(nrows,dtype=int)
+                    Lo = np.eye(ncols,dtype=int)
                     Lo[[piv,piv,other_col_ind,other_col_ind],
                        [piv,other_col_ind,piv,other_col_ind]] = \
                         [sigma,-beta,tau,alpha]
