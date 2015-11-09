@@ -109,7 +109,7 @@ def smith_normal_form(A):
         :return:
         '''
         nonlocal S
-        has_all_zeros = np.logical_not(np.any(S,axis = 0)) #find which columns have zeros
+        has_all_zeros = np.logical_not(np.any(S,axis = 0)) #find which columns have only zeros
         col_indices = np.argsort(has_all_zeros,kind = 'mergesort')
         S = S[:,col_indices]
 
