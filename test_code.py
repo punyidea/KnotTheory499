@@ -3,9 +3,9 @@ import numpy as np
 
 def matrix_mathematica_print(mat):
 
-    mat_string = '}, {'.join([', '.join(mat_row) for mat_row in mat])
+    mat_string = '},\n {'.join([', '.join(map(str,mat_row)) for mat_row in mat])
 
-    print('\{\{{}\}\}'.format(mat_string))
+    print('{'+mat_string+'}')
 
 mat_sizes =  np.random.randint(3,45,(400,1))
 mat_sizes = np.concatenate((mat_sizes,mat_sizes),axis=1)
